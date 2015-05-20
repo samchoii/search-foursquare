@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Search Social</title>
+  <title>Search FourSquare</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
@@ -37,13 +37,14 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Welcome to Search Foursquare!</h1>
-        <p>This is an Angular app to search Foursqaure for venues by keyword!</p>
+        <p>This is an Angular app to search Foursquare for venues by keyword!</p>
       </div>
     </div>
 
     <div class="container">
       <p><h2>Let's search for: <span id="keyword">{{vm.keyword}}</span></h2></p>
-      <table ng-show="vm.venues.length"class="table table-bordered table-hover">
+      <span id="errorMessage" ng-show="vm.errorMessage"><h3>{{vm.errorMessage}}</h3></span>
+      <table ng-show="vm.venues.length > 0"class="table table-bordered table-hover">
       <thead>
         <tr>
           <th>Name of Venue</th>
@@ -51,7 +52,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat='venue in vm.venues'>
+        <tr ng-repeat="venue in vm.venues track by $index">
           <td>{{venue.name}}</td>
           <td>{{venue.stats.checkinsCount}}
         </tr>
