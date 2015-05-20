@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="SearchFourSquareCtrl as vm">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Search Social</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Search Foursquare</a>
+        </div>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="input-medium search-query" ng-model="vm.keyword" placeholder='Keyword'/>
+          <input type="text" class="input-medium search-query" ng-model="vm.client_id" placeholder='Client Id'/>
+          <input type="text" class="input-medium search-query" ng-model="vm.client_secret" placeholder='Client Secret'/>
+          <input type="text" class="input-medium search-query" ng-model="vm.near" placeholder='Locale, i.e LA,CA'/>
+          <button type="submit" class="btn btn-success" ng-click="vm.search(vm.keyword, vm.client_id, vm.client_secret, vm.near)">Search</button>
+      </form>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to Search Foursquare!</h1>
+        <p>This is an Angular app to search Foursqaure for venues by keyword!</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <p><h2>Let's search for: <span id="keyword">{{vm.keyword}}</span></h2></p>
+      <table ng-show="vm.venues.length"class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Name of Venue</th>
+          <th>Check Ins</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='venue in vm.venues'>
+          <td>{{venue.name}}</td>
+          <td>{{venue.stats.checkinsCount}}
+        </tr>
+      </tbody>
+      </table>
+    </div>
+</body>
+</html>

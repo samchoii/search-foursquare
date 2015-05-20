@@ -1,0 +1,14 @@
+/* app css stylesheet */
+
+#keyword {
+  color: green;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.table>tbody>tr>td:first-child, .table>thead>tr>th:first-child {
+  width: 750px;
+}
