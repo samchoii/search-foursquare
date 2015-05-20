@@ -29,8 +29,6 @@ function dataservice($resource) {
 	}
 
 	function getVenues(keyword, client_id, client_secret, near) {
-		// var 4sq_client_id = 'F3GXX5HYYU2SPB2UUCZHNB1G4HMMZIA55P3JVLQA5DM2UVRM'
-		// var 4sq_client_secret = '14C11HCWX34Q3ADUS3Y3B14LVSR3PNYL1J4YMETGAJEFUOQU'
 		var url = 'https://api.foursquare.com/v2/venues/search?client_id=' + client_id + '&client_secret=' + client_secret + '&near=' + near + '&query=' + keyword + '&v=20140806&m=foursquare&limit=10';
 		
 		return $resource(url, {}, {}).get().$promise.then(getVenuesSuccess).catch(getVenuesFailure);
