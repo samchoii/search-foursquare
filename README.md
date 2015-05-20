@@ -10,10 +10,10 @@ their client id and client secret as part of the request.
 
 This project relies upon Bootstrap for styling and AngularJS for scripting.
 
-keyword = the search query (i.e sushi)__
-client id = your app's foursquare client id__
-client secret = your app's foursquare client secret__
-locale = the geographic locale in which you want to limit the search (i.e 'LA,CA', 'SF,CA', 'NY,NY', 'Boston,MA')__
+keyword = the search query (i.e sushi)<br/>
+client id = your app's foursquare client id<br/>
+client secret = your app's foursquare client secret<br/>
+locale = the geographic locale in which you want to limit the search (i.e 'LA,CA', 'SF,CA', 'NY,NY', 'Boston,MA')<br/>
 
 Bootstrapping of the app was done with the help of https://github.com/angular/angular-seed.git
 
