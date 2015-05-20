@@ -10,10 +10,10 @@ their client id and client secret as part of the request.
 
 This project relies upon Bootstrap for styling and AngularJS for scripting.
 
-keyword = the search query (i.e sushi)
-client id = your app's foursquare client id
-client secret = your app's foursquare client secret
-locale = the geographic locale in which you want to limit the search (i.e 'LA,CA', 'SF,CA', 'NY,NY', 'Boston,MA')
+keyword = the search query (i.e sushi)__
+client id = your app's foursquare client id__
+client secret = your app's foursquare client secret__
+locale = the geographic locale in which you want to limit the search (i.e 'LA,CA', 'SF,CA', 'NY,NY', 'Boston,MA')__
 
 Bootstrapping of the app was done with the help of https://github.com/angular/angular-seed.git
 
@@ -29,22 +29,6 @@ You need git to clone the search-foursquare repository. You can get git from
 We also use a number of node.js tools to initialize the application. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
-### Clone search-foursquare
-
-Clone the search-foursquare repository using [git][git]:
-
-```
-git clone https://github.com/samchoii/search-foursquare.git
-cd search-foursquare
-```
-
-If you just want to start a new project without the search-foursquare commit history then you can do:
-
-```bash
-git clone --depth=1 https://github.com/samchoii/search-foursquare.git <your-project-name>
-```
-
-The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Install Dependencies
 
